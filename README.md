@@ -1,16 +1,23 @@
-## Hi there 👋
+<div align="center">
+  
+# Assembler: Scalable 3D Part Assembly via Anchor Point Diffusion
 
-<!--
-**assembler3d/assembler3d** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
-Here are some ideas to get you started:
+[![arXiv](https://img.shields.io/badge/arXiv-xxxx-b31b1b.svg?logo=arXiv)]() &ensp; [![Project page](https://img.shields.io/badge/Project-Page-brightgreen)](https://assembler3d.github.io)
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+</div>
+
+---
+
+<p align="center">
+  <img src="assets/teaser.png" >
+</p>
+
+
+
+## 📢 News
+- **2025-06-23**: Technical report is released on Arxiv. 
+
+
+## 📋 TODO
+- [ ] Release code and model. Stay tuned!
