@@ -3,7 +3,7 @@
 # Assembler: Scalable 3D Part Assembly via Anchor Point Diffusion
 
 
-[![arXiv](https://img.shields.io/badge/arXiv-xxxx-b31b1b.svg?logo=arXiv)]() &ensp; [![Project page](https://img.shields.io/badge/Project-Page-brightgreen)](https://assembler3d.github.io)
+[![arXiv](https://img.shields.io/badge/arXiv-2506.17074-b31b1b.svg?logo=arXiv)](https://arxiv.org/abs/2506.17074) &ensp; [![Project page](https://img.shields.io/badge/Project-Page-brightgreen)](https://assembler3d.github.io)
 
 </div>
 
