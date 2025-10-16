@@ -43,5 +43,3 @@ To run the inference demo, simply use:
 python ./scripts/demo.py --config ./configs/demo/demo.yaml --input_dir ./examples/4ef447cbb4a72f0a0e5941c9073c4baa0babd3f93ec55d62b040915f8bf3f49c --output_dir ./outputs/4ef447
 ```
 This script runs for example data inside `./examples` from Toys4k dataset. You could use your own data to assemble. Put all the part meshes (in GLB format) and reference image (in PNG format) into a single folder, and set the `input_dir` argument to that folder.
-
-```
