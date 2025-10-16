@@ -1,0 +1,12 @@
+seed: 2025
+num_sampling_steps: 250
+ckpt_path: ckpts/objaverse_500k.pt
+
+# Model
+model: DiT_M
+token_length: 1024
+condition_channels: 771
+cfg_scale: 4.0
+
+# dora
+dora_config_path: core/model/encoder/Dora-VAE-test.yaml

@@ -1,0 +1,70 @@
+exp_root_dir: "outputs"
+name: "Dora-VAE"
+tag: "test"
+seed: 0
+
+data_type: "objaverse-datamodule"
+data:
+  root_dir: ""
+  list_file: ""
+  sample_num: 1024
+  data_type: "sdf" 
+  rotate_points: True
+  
+  load_supervision: True
+  supervision_type: "tsdf" 
+  n_supervision: [21384,10000,10000]
+
+  batch_size: 1
+  num_workers: 12
+
+system_type: "shape-autoencoder-system"
+system:
+  sample_posterior: true
+  
+  shape_model_type: "michelangelo-autoencoder"
+  shape_model:
+    pretrained_model_name_or_path: core/model/encoder/ckpts/Dora-VAE-1.1/dora_vae_1_1.ckpt
+    embed_dim: 64
+    point_feats: 3   # xyz + normal
+    out_dim: 1 
+    embed_type: "fourier"
+    num_freqs: 8
+    include_pi: false
+    heads: 12
+    width: 768
+    num_encoder_layers: 8
+    num_decoder_layers: 16
+    use_ln_post: true
+    init_scale: 0.25
+    qkv_bias: false
+    use_flash: true
+    use_checkpoint: true
+    use_downsample: true
+
+  loss:
+    lambda_coarse_logits: 1.0
+    lambda_sharp_logits: 2.0
+    lambda_kl: 0.001
+
+  optimizer:
+    name: AdamW
+    args:
+      lr: 1.e-5
+      betas: [0.9, 0.99]
+      eps: 1.e-6
+
+trainer:
+  num_nodes: 1
+  max_epochs: 1000
+  log_every_n_steps: 5
+  num_sanity_val_steps: 1
+  val_check_interval: 200
+  # check_val_every_n_epoch: 3
+  enable_progress_bar: true
+  precision: 16-mixed
+
+checkpoint:
+  save_last: true
+  save_top_k: -1
+  every_n_train_steps: 500
